@@ -1,0 +1,48 @@
+from typing import Any, Dict
+
+class IAction:
+    
+    def take_screenshot(self, targetPath: str) -> None:
+        """
+        Takes a screenshoot of the current VM output and stores it as a file.
+
+        Args:
+            targetPath (str): Where to store the screenshoot at.
+        """
+        pass
+    
+    def send_keyboard_key_action(self, keyboardKey: Dict[str, Any]) -> str:
+        """
+        Performs a keyboard key press action via the qemu monitor.
+
+        Args:
+            keyboardKey (Dict[str, Any]): The dict defining the keyboard key to send and how.
+        """
+        pass
+
+    def send_mouse_move_action(self, mouseMove: Dict[str, Any]) -> None:
+        """
+        Performs a mouse move action via the qemu monitor.
+
+        Args:
+            mouseMove (Dict[str, Any]): The dict defining the mouse move action.
+        """
+        pass
+    
+    def send_mouse_click_action(self, mouseClick: Dict[str, Any]) -> None:
+        """
+        Performs a mouse click action via the qemu monitor.
+
+        Args:
+            mouseMove (Dict[str, Any]): The dict defining the mouse click action.
+        """
+        pass
+    
+    def send_command_action(self, command: Dict[str, Any]) -> None:
+        """
+        Performs a mouse click action via the qemu monitor.
+
+        Args:
+            mouseMove (Dict[str, Any]): The dict defining the mouse click action.
+        """
+        pass
